@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Mynor Compact Medium';
+    src: url(Fonts/MynorCompactMedium.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+html{
+    height: 100%;
+    display: -webkit-inline-box !important;
+}
+
+body{
+    max-width:400px;
+    margin: auto;
+    background: rgb(235, 230, 226);
+    display: flex !important;
+    padding: 5% 8%;
+} 
+
+.card-1{
+    grid-area: card-1;
+}
+
+.card-2{
+    grid-area: card-2;
+}
+
+.card-3{
+    grid-area: card-3;
+}
+
+.card-4{
+    grid-area: card-4;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "card-1"
+    "card-2"
+    "card-3"
+    "card-4";
+}
+article{
+    padding: 10px 8%;
+    background: white;
+    box-shadow: 5px 10px 15px -10px;
+    height: fit-content;
+}
+
+article img{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    height: 35.5%;
+}
+
+#sub-p{
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+    color: rgb(136, 135, 135);
+    font-size: 15px;
+}
+
+#numbers span{
+    line-height: 1.4;
+}
+
+header{
+    margin-bottom: 4% !important;
+}
+
+header p{
+    margin: 0;
+}
+
+#pa1{
+    font-family: cursive;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#pa2{
+    text-align: center;
+    font-size: 17px;
+}
+
+#underline{
+    text-align: center;
+    position: relative;
+}
+
+#underline span{
+    font-size: 15px;
+    z-index: 100;
+    position: relative;
+    background: rgb(235, 230, 226);
+}
+
+#underline::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background: gray;
+    z-index: 50;
+}
+
+h1{
+    font-family: 'Mynor Compact Medium';
+    color: rgb(184, 16, 31);
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 55px;
+    margin: 0;
+}
+
+#numbers span {
+    line-height: 1.5;
+}
+.grid-container p span{
+    color: rgb(216, 91, 105);
+}
+.grid-container p #letraCard {
+    font-size: 60px;
+    float: left;
+    height: 55px;
+    margin-right: 8px;
+    padding: 0;
+}
+h2 {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+@media (min-width: 600px) {
+    body{
+        min-width: 500px;
+        max-width: 820px;
+        margin: auto;
+        padding: 5% 8%;
+    }
+    .grid-container{
+        grid-template-columns: 50%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "card-1 card-2"
+        "card-3 card-4";
+    }
+    article{
+        height: initial;
+    }
+}
+
+@media (min-width: 1025px) {
+    body{
+        min-width: 80%;
+        max-width: 1920px;
+        margin: auto;
+        padding: 0 3%;
+    }
+    .grid-container{
+        grid-template-columns:24.35% 24.35% 24.35% 24.35%;
+        grid-template-areas: 
+        "card-1 card-2 card-3 card-4";
+    }
+    .grid-container p{
+        font-size: 14.5px;
+        line-height: 1.4;
+    }
+
+    article{
+        background: white;
+        height: initial;
+    }
+    
+}
